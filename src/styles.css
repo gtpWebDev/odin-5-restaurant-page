@@ -1,0 +1,82 @@
+:root {
+
+  --font-hierarchy: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* Main body max of 80% vw and 1500px, centred */
+  --maxContentWidth: 1500px;
+  --bodyWidth: min(var(--maxContentWidth),80vw);
+  --bodyMargin: max(calc(0.5*(100vw - var(--maxContentWidth))),10vw);
+
+  --tab-height: 50px;
+
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font-hierarchy);
+  width: var(--bodyWidth);
+  margin: 5vh var(--bodyMargin);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  /* background-image: url("noun-oven-1136801.svg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+header {
+  grid-row: 1;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, max(150px, 10vw));
+  gap: 30px;
+  justify-content: center;
+  place-items: center;
+  
+}
+
+.dial-container {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  place-items: center;
+}
+
+.dial-header {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.dials {
+  width: 100px;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transition-duration: 1s;
+}
+
+.dials:focus {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transition-duration: 1s;
+}
+
+button {
+  height: var(--tab-height);
+}
+
+#content {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: repeat(2,auto);
+  place-items: center;
+}
+
+img {
+  width: 50px;
+}
