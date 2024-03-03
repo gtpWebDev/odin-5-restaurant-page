@@ -15,13 +15,14 @@ p {
   margin: 0;
 }
 
+
 body {
   font-size: 16px;
   font-family: var(--font-hierarchy);
   width: var(--bodyWidth);
   margin: 5vh var(--bodyMargin);
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 1fr 3.5fr;
   /* background-image: url("noun-oven-1136801.svg");
   background-repeat: no-repeat;
   background-size: cover; */
@@ -37,6 +38,14 @@ nav {
   gap: 30px;
   justify-content: center;
   place-items: center;
+  background-color: rgb(5, 49, 49);
+  padding: 20px 0;
+  border-radius: 15px 15px 0 0;
+  color: white;
+  border-top: 36px solid black;
+  border-left: 16px solid black;
+  border-right: 16px solid black;
+
   
 }
 
@@ -73,8 +82,15 @@ button {
 #content {
   grid-row: 2;
   display: grid;
-  grid-template-rows: repeat(2,auto);
+  grid-template-rows: auto 1fr;
   place-items: center;
+  align-items: start;
+  background-color: rgb(227, 227, 239);
+  padding-top: 30px;
+  border-radius: 0 0 15px 15px;
+  border-bottom: 66px solid black;
+  border-left: 16px solid black;
+  border-right: 16px solid black;
 }
 
 img {
