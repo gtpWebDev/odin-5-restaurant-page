@@ -1,11 +1,11 @@
-import { pageLoadHeader } from "./pageLoad.js";
-import { loadHomeContent } from "../home.js";
-import { loadMenuContent } from "../menu.js";
-import { loadAboutContent } from "../about.js";
+import loadNavbar from "./navbar.js";
+import { loadHomeContent } from "./home.js";
+import { loadMenuContent } from "./menu.js";
+import { loadAboutContent } from "./about.js";
 
 import "./styles.css"
 
-pageLoadHeader()
+loadNavbar()
 loadHomeContent()
 
 const addTabListeners = (() => {
